@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="cffc_drilling" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1674d208-cb93-49f2-87ad-715780cac471" name="Default Changelist" comment="修改：承包商详情 企业资质展示" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/cffc_drilling$Tomcat_8_5_42.ic" NAME="Tomcat 8.5.42 Coverage Results" MODIFIED="1568254012520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="311" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/system/hex-login.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/system/hex-manage.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/system/hex-register.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/cffc/manage/manage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/cffc/login/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1870">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/cffc/forget_password/forget_password.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1452">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/cffc/register/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="99" column="84" selection-start-line="99" selection-start-column="84" selection-end-line="99" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/hait/hait-core.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="74" column="71" lean-forward="true" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/hex-map-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Tag Library Descriptor" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hex_manage_queryCont</find>
+      <find>hex_manage_queryContractorCertificateByContractorId</find>
+      <find>certificateName</find>
+      <find>equipmentImg</find>
+      <find>hex_manage_queryCertificateByUserIdAndCertificateId</find>
+      <find>showTime</find>
+      <find>hex_manage_queryCertificateName</find>
+      <find>hex_manage_queryCertificateByUserIdFunction</find>
+      <find>session</find>
+      <find>cur</find>
+      <find>operate_id</find>
+      <find>hex_manage_insertCertificateManage</find>
+      <find>hex_manage_queryRegisterApprovalFunction</find>
+      <find>hex_manage_queryRegisterApproval</find>
+      <find>hex_manage_queryTeamByContractorId</find>
+      <find>hex_manage_queryContractorUserCertificateFunction</find>
+      <find>hex_manage_queryContractorUserCertificate</find>
+      <find>hex_manage_queryContractWaringInformationFunction</find>
+      <find>资质管理</find>
+      <find>form</find>
+      <find>hex_manage_queryCertificateManage</find>
+      <find>hex_manage_insertCertifyingManage</find>
+      <find>hex_manage_insertEquipmentManage</find>
+      <find>hex_manage_updateServerTypeFunction</find>
+      <find>showUserDialog</find>
+      <find>hex_manage_queryWaringInformationFunction</find>
+      <find>hex_manage_queryWarningInformation</find>
+      <find>hex_manage_updateServerCertificate</find>
+      <find>hex_manage_updateServerEquipment</find>
+      <find>hex_manage_deleteServerEquipmentByServerId</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>register_pwd</replace>
+      <replace>registerPwd</replace>
+      <replace>registerName</replace>
+      <replace>hait-button strrr</replace>
+      <replace>hait-button stress</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Sunjie &lt;326190735@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_contract.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_contract.html" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/function/system/QueryContractByContractorIdFunction.java" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/jquery.cityselect.js" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/contract_manage.html" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/function/system/QueryEquipmentManageFunction.java" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/function/system/UpdateEquipmentCertificateFunction.java" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/function/system/InsertEquipmentCertificateFunction.java" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/contractor_manage.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/user_certificate.js" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/util/DateUtil.java" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/certifying_manage.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/post_manage.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/equipment_manage.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/register_approval.html" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_warning.html" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_operate_log.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/certificate_manage.html" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/user_certificate.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/certificate_manage.js" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/certifying_manage.js" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/equipment_manage.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/team_details.html" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_team.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/team_personnel.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/team_details.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/team_details.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_team.js" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/team_personnel.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/certification_approval.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/certification_approval.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/warning_manage.js" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/warning_manage.html" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/function/system/QueryWarningManageFunction.java" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/contractor_details.js" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/team_details.html" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/contractor_details.html" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/function/system/InsertServerTypeFunction.java" />
+        <option value="$PROJECT_DIR$/src/com/cffc/manage/function/system/UpdateServerTypeFunction.java" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/server_manage.js" />
+        <option value="$PROJECT_DIR$/web/cffc/administrator/server_manage.html" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/approval_manage.html" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_equipment.js" />
+        <option value="$PROJECT_DIR$/web/cffc/contractor/contractor_equipment.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/hex/drilling/hex-cffc.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/hex/system/hex-manage.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/hex/hex-map-config.xml" />
+        <option value="$PROJECT_DIR$/web/cffc/manage/manage.html" />
+        <option value="$PROJECT_DIR$/web/cffc/login/login.html" />
+        <option value="$PROJECT_DIR$/web/cffc/forget_password/forget_password.html" />
+        <option value="$PROJECT_DIR$/web/cffc/register/register.html" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-356" />
+    <option name="y" value="1" />
+    <option name="width" value="1936" />
+    <option name="height" value="1030" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cffc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cffc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cffc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="function" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="cffc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="cffc" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="cffc" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="hait" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="hex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cffc_drilling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cffc_drilling" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="hex" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568280931040" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15332031" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Idea_project\cffc_drilling\web\cffc\administrator" />
+      <recent name="D:\Idea_project\cffc_drilling\web\cffc\contractor" />
+      <recent name="D:\Idea_project\cffc_drilling\web\cffc\administrator\img" />
+      <recent name="D:\Idea_project\cffc_drilling\web\cffc\manage" />
+      <recent name="D:\Idea_project\cffc_drilling\web\cffc\forget_password" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cffc.manage.function.system" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Idea_project\cffc_drilling\web\cffc\administrator" />
+      <recent name="D:\Idea_project\cffc_drilling\web\WEB-INF\hex\system" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.42">
+    <configuration name="DateUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cffc.manage.util.DateUtil" />
+      <module name="cffc_drilling" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cffc.manage.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.41" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/cffc/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_411_cffc_drilling" />
+        <option name="HTTP_PORT" value="8080" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51192" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.42" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.42" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="cffc_drilling">
+          <settings>
+            <option name="CONTEXT_PATH" value="/cffc" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_411_cffc_drilling_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51192" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="cffc_drilling" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.411" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_cffc_drilling" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51192" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DateUtil" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.41" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.42" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DateUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1674d208-cb93-49f2-87ad-715780cac471" name="Default Changelist" comment="" />
+      <created>1565751667619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565751667619</updated>
+      <workItem from="1565751668915" duration="19192000" />
+      <workItem from="1565831199738" duration="28593000" />
+      <workItem from="1565917646624" duration="417000" />
+      <workItem from="1565918089108" duration="1096000" />
+      <workItem from="1565919314341" duration="23205000" />
+      <workItem from="1566177065231" duration="22882000" />
+      <workItem from="1566262785953" duration="26568000" />
+      <workItem from="1566349827126" duration="24513000" />
+      <workItem from="1566436032350" duration="24365000" />
+      <workItem from="1566522252516" duration="24992000" />
+      <workItem from="1566781912426" duration="24678000" />
+      <workItem from="1566867684077" duration="17928000" />
+      <workItem from="1566954048690" duration="24593000" />
+      <workItem from="1567040717398" duration="24483000" />
+      <workItem from="1567127126240" duration="25368000" />
+      <workItem from="1567388377058" duration="21119000" />
+      <workItem from="1567473125061" duration="23577000" />
+      <workItem from="1567560897565" duration="22655000" />
+      <workItem from="1567646162693" duration="21554000" />
+      <workItem from="1567732638973" duration="25124000" />
+      <workItem from="1567991902554" duration="19857000" />
+      <workItem from="1568078280024" duration="14956000" />
+      <workItem from="1568164332441" duration="2039000" />
+      <workItem from="1568181189708" duration="11047000" />
+      <workItem from="1568250792036" duration="19840000" />
+      <workItem from="1568595600129" duration="7644000" />
+      <workItem from="1568682403439" duration="1702000" />
+      <workItem from="1568707341960" duration="888000" />
+      <workItem from="1568797509118" duration="2043000" />
+      <workItem from="1568799703920" duration="589000" />
+      <workItem from="1568800519327" duration="302000" />
+    </task>
+    <task id="LOCAL-00001" summary="完成注册接口">
+      <created>1566194257714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566194257714</updated>
+    </task>
+    <task id="LOCAL-00002" summary="完善注册接口">
+      <created>1566195954597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566195954597</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完善注册接口">
+      <created>1566196188809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566196188809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="完成资质管理、设备管理、发证机关管理">
+      <created>1566380919143</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566380919143</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完成服务类别管理、承包商设备管理">
+      <created>1566525672954</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566525672954</updated>
+    </task>
+    <task id="LOCAL-00006" summary="完成承包商设备管理、服务类别管理">
+      <created>1566525745444</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566525745444</updated>
+    </task>
+    <task id="LOCAL-00007" summary="服务类别管理增加">
+      <created>1566813419179</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566813419179</updated>
+    </task>
+    <task id="LOCAL-00008" summary="承包商管理 队伍管理">
+      <created>1566981079244</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566981079244</updated>
+    </task>
+    <task id="LOCAL-00009" summary="队伍详情">
+      <created>1566981558522</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1566981558522</updated>
+    </task>
+    <task id="LOCAL-00010" summary="正则修改">
+      <created>1566986072573</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1566986072573</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修改队伍详情页面">
+      <created>1567044732496</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1567044732496</updated>
+    </task>
+    <task id="LOCAL-00012" summary="承包商管理">
+      <created>1567159502670</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567159502670</updated>
+    </task>
+    <task id="LOCAL-00013" summary="查看人员资质">
+      <created>1567389317673</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567389317673</updated>
+    </task>
+    <task id="LOCAL-00014" summary="预警管理">
+      <created>1567501611443</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1567501611444</updated>
+    </task>
+    <task id="LOCAL-00015" summary="预警信息">
+      <created>1567501670254</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567501670254</updated>
+    </task>
+    <task id="LOCAL-00016" summary="资质页面修改">
+      <created>1567502270125</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567502270125</updated>
+    </task>
+    <task id="LOCAL-00017" summary="完成预警管理">
+      <created>1567505069638</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1567505069638</updated>
+    </task>
+    <task id="LOCAL-00018" summary="完成操作日志">
+      <created>1567592570221</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1567592570221</updated>
+    </task>
+    <task id="LOCAL-00019" summary="完善服务类别、设备资质">
+      <created>1567675419322</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1567675419322</updated>
+    </task>
+    <task id="LOCAL-00020" summary="优化界面、功能">
+      <created>1567762852504</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1567762852504</updated>
+    </task>
+    <task id="LOCAL-00021" summary="优化">
+      <created>1567995290218</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1567995290218</updated>
+    </task>
+    <task id="LOCAL-00022" summary="查看人员资质">
+      <created>1568003765666</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1568003765666</updated>
+    </task>
+    <task id="LOCAL-00023" summary="人员资质编辑">
+      <created>1568009665761</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1568009665762</updated>
+    </task>
+    <task id="LOCAL-00024" summary="修改按钮颜色">
+      <created>1568010883229</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1568010883229</updated>
+    </task>
+    <task id="LOCAL-00025" summary="修改日期工具类">
+      <created>1568024510168</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1568024510168</updated>
+    </task>
+    <task id="LOCAL-00026" summary="修改 页面编号">
+      <created>1568200635489</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1568200635489</updated>
+    </task>
+    <task id="LOCAL-00027" summary="增加 资质、发证机关、岗位、设备不能重复添加">
+      <created>1568255199331</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1568255199331</updated>
+    </task>
+    <task id="LOCAL-00028" summary="修改：证书详情过长、把内容过多的对话框需要加上自动滚动">
+      <created>1568255845306</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1568255845306</updated>
+    </task>
+    <task id="LOCAL-00029" summary="修改：证书详情样式调整，时间去掉时分秒">
+      <created>1568259914209</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1568259914209</updated>
+    </task>
+    <task id="LOCAL-00030" summary="修改：预警管理时间去掉时分秒，复审时间移到最后，只查询已到期和假证">
+      <created>1568269051276</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1568269051276</updated>
+    </task>
+    <task id="LOCAL-00031" summary="修改：设备资质编号统一显示设备编号，而不是自动生成的内部编号">
+      <created>1568269333864</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1568269333864</updated>
+    </task>
+    <task id="LOCAL-00032" summary="修改：承包商详情 企业资质展示">
+      <created>1568270577708</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1568270577708</updated>
+    </task>
+    <task id="LOCAL-00033" summary="修改：承包商详情 企业资质展示">
+      <created>1568277532797</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1568277532797</updated>
+    </task>
+    <task id="LOCAL-00034" summary="修改：服务类别在数量为0的时候不进行插入">
+      <created>1568598280290</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1568598280290</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="507809000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973638" visible="true" weight="0.18496802" />
+      <window_info id="Structure" order="1" sideWeight="0.5026362" side_tool="true" weight="0.21801706" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49840087" weight="0.62296855" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.24918744" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49520257" weight="0.09317443" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32937366" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.4171181" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.09967497" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49733475" weight="0.4171181" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="承包商管理 队伍管理" />
+    <MESSAGE value="队伍详情" />
+    <MESSAGE value="正则修改" />
+    <MESSAGE value="修改队伍详情页面" />
+    <MESSAGE value="承包商管理" />
+    <MESSAGE value="预警管理" />
+    <MESSAGE value="预警信息" />
+    <MESSAGE value="资质页面修改" />
+    <MESSAGE value="完成预警管理" />
+    <MESSAGE value="完成操作日志" />
+    <MESSAGE value="完善服务类别、设备资质" />
+    <MESSAGE value="优化界面、功能" />
+    <MESSAGE value="优化" />
+    <MESSAGE value="查看人员资质" />
+    <MESSAGE value="人员资质编辑" />
+    <MESSAGE value="修改按钮颜色" />
+    <MESSAGE value="修改日期工具类" />
+    <MESSAGE value="修改 页面编号" />
+    <MESSAGE value="增加 资质、发证机关、岗位、设备不能重复添加" />
+    <MESSAGE value="修改：证书详情过长、把内容过多的对话框需要加上自动滚动" />
+    <MESSAGE value="修改：证书详情样式调整，时间去掉时分秒" />
+    <MESSAGE value="修改：预警管理时间去掉时分秒，复审时间移到最后，只查询已到期和假证" />
+    <MESSAGE value="修改：设备资质编号统一显示设备编号，而不是自动生成的内部编号" />
+    <MESSAGE value="修改：承包商详情 企业资质展示" />
+    <MESSAGE value="修改：服务类别在数量为0的时候不进行插入" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改：服务类别在数量为0的时候不进行插入" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/cffc/manage/function/system/InsertEquipmentCertificateFunction.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/register_approval.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_operate_log.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_warning.html" />
+    <entry file="file://$PROJECT_DIR$/src/com/cffc/manage/function/system/QueryContractorUserCertificateFunction.java" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/user_certificate.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/certificate_manage.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/certificate_manage.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/certifying_manage.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/certifying_manage.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/equipment_manage.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/equipment_manage.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/team_details.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/team_details.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_team.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_team.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/certification_approval.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/warning_manage.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/warning_manage.html" />
+    <entry file="file://$PROJECT_DIR$/src/com/cffc/manage/function/system/QueryWarningManageFunction.java" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/team_details.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/register/css/style1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="244" column="1" selection-start-line="244" selection-start-column="1" selection-end-line="244" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/contractor_details.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/team_personnel.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/contractor_details.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/team_details.html" />
+    <entry file="file://$PROJECT_DIR$/src/com/cffc/manage/function/system/InsertServerTypeFunction.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/cffc/manage/function/system/UpdateCheckManageFunction.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/cffc/manage/function/system/UpdateServerTypeFunction.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/cffc/manage/function/system/DeleteServerTypeFunction.java" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/approval_manage.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/certification_approval.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/approval_manage.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/server_manage.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/contract_details.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/team_personnel.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/administrator/server_manage.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_certificate.html" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_certificate.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_equipment.js" />
+    <entry file="file://$PROJECT_DIR$/web/cffc/contractor/contractor_equipment.html" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/drilling/hex-app.xml" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/drilling/hex-cffc.xml" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/system/hex-login.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/system/hex-manage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/system/hex-register.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cffc/manage/manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cffc/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cffc/forget_password/forget_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/hex/hex-map-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cffc/register/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="99" column="84" selection-start-line="99" selection-start-column="84" selection-end-line="99" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/hait/hait-core.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="74" column="71" lean-forward="true" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>cffc_drilling</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web (cffc_drilling)|Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>cffc_drilling</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

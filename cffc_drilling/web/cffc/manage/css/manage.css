@@ -1,0 +1,305 @@
+
+.manage-head {
+    height: 60px;
+    width: 100vw;
+}
+
+.manage-body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.manage-contractor {
+    position: absolute;
+    width: 240px;
+    height: 60px;
+    background: rgba(58, 65, 92, 1);
+    line-height: 60px;
+    border-bottom: 1px solid rgb(50, 56, 78);
+    color: white;
+}
+
+.manage-user {
+    width: 100vw;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 0 0 2px rgb(188, 190, 189);
+}
+
+.manage-menu {
+    position: absolute;
+    top: 61px;
+    width: 240px;
+    min-width: 150px;
+    max-width: 240px;
+    background: rgba(58, 65, 92, 1);
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.manage-page {
+    background-color: white;
+}
+
+.manage-page-box {
+    background-color: #EFEFEF;
+    margin-top: 2px;
+    margin-left: 240px;
+    padding:20px 20px 20px 23px;
+}
+
+.contractor-img {
+    margin: 10px 8px 0px 10px;
+    float: left;
+}
+
+.contractor-icon {
+    width: 42px;
+    height: 40px;
+}
+
+.contractor-name {
+    float: left;
+    line-height: 60px;
+}
+
+.menu-name-select {
+    position: absolute;
+    left: 240px;
+    height: 60px;
+    width: 300px;
+    text-align: left;
+    padding-left: 30px;
+    color: rgba(102, 102, 102, 1);
+}
+
+.user-name {
+    height: 60px;
+    width: 100vw;
+    text-align: right;
+    color: rgba(102, 102, 102, 1);
+}
+
+.my-name {
+    margin-left: 2px;
+}
+
+.my-img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.menu-0 {
+    height: 55px;
+    width: 218px;
+    color: white;
+    line-height: 55px;
+    padding-left: 20px;
+    text-align: left;
+    border-left: 2px solid rgba(58, 65, 92, 1);
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.menu-1 {
+    height: 55px;
+    width: 188px;
+    color: white;
+    line-height: 55px;
+    padding-left: 70px;
+    text-align: left;
+    border-left: 2px solid rgba(58, 65, 92, 1);
+    cursor: pointer;
+}
+
+/*不显示滚动条*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+.cover-div {
+    background: #000;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.operate-border {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: 83px;
+    top: 58px;
+    border: 7px solid;
+    border-color: transparent transparent white transparent;
+}
+
+.my-operate {
+    width: 100px;
+    height: 80px;
+    line-height: 30px;
+    color: rgba(102, 102, 102, 1);
+    background-color: white;
+    position: absolute;
+    right: 30px;
+    top: 72px;
+    border-radius: 3px;
+    padding: 0px 10px 0px 10px;
+    z-index: 3;
+}
+
+.exit-system {
+    width: 340px;
+    height: 120px;
+    position: absolute;
+    top: 42vh;
+    left: 40vw;
+    background-color: white;
+    border-radius: 3px;
+    z-index: 3;
+    padding: 15px 15px 0px 18px;
+    text-align: left;
+    font-size:13px;
+}
+
+.operate-icon-password {
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 2.5px;
+}
+
+.operate-icon-exit {
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.cover-transparent {
+    background: transparent;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.user-button {
+    float: right;
+    width: 120px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.update-password {
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.exit-logout {
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.exit-head {
+    height: 40px;
+    font-size:15px;
+}
+
+.exit-text {
+    width: 300px;
+    float: left;
+    text-align: left
+}
+
+.cancel-button {
+    width: 40px;
+    float: left;
+    text-align: right;
+}
+
+.exit-button{
+    text-align: right;
+    height:40px;
+}
+
+.exit-body{
+    height:40px;
+    color: rgba(102, 102, 102, 1);
+    font-size: 13px;
+}
+
+.cancel-button-bottom{
+    float: right;
+    width:50px;
+    height:28px;
+    border:1px solid #e2e2e2;
+    text-align: center;
+    line-height: 28px;
+    background-color: #fefefe;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size:12px;
+}
+
+.confirm-button{
+    float: right;
+    width:50px;
+    height:28px;
+    text-align: center;
+    line-height: 28px;
+    color: white;
+    background-color: #5D74B5;
+    border:1px solid #5D74B5;
+    border-radius: 3px;
+    margin-left: 10px;
+    font-size:12px;
+    cursor: pointer;
+}
+
+.cancel-button-icon{
+    width:12px;
+    height:12px;
+    cursor: pointer;
+}
+
+.exit-warning{
+    width:18px;
+    height:18px;
+    vertical-align: top;
+
+}
+
+.password-table{
+    font-size:14px;
+}
+
+.password-table tr{
+    height:40px;
+}
+
+.password-table td{
+    width:90px;
+    text-align: right;
+}
+
+.required-text{
+    color:red;
+    margin-right:3px;
+    font-weight: bold;
+    font-size:15px;
+}
+

@@ -1,0 +1,180 @@
+﻿<!doctype html>
+<html>
+<head design-width="640">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title></title>
+<link rel="stylesheet" href="css/style.css" /><!--页面样式-->
+<link rel="stylesheet" href="css/common.css" /><!--常用样式-->
+<link rel="stylesheet" href="css/animate.min.css" /><!--CSS3动画库-->
+<script src="js/jquery-2.2.4.min.js"></script><!--jQ库-->
+<script src="js/auto-size.js"></script><!--设置字体大小-->
+<script src="../cffc/util/util.js?v=201908071"></script><!--设置字体大小-->
+<script src="index.js?v=20190826"></script>
+<script src="../frame/includeNoCss.js?v=20190801"></script>
+</head>
+<style>
+	.my-info{
+		float: left;
+		width:70%;
+		height:1rem;
+		padding-top:.24rem;
+	}
+	.my-headimg{
+		float: left;
+		width: 20%;
+		height:1rem;
+		text-align: right;
+		line-height:1rem;
+	}
+	.user-info{
+		width:100%;
+		height:1.4rem;
+		margin-left:.2rem;
+		margin-top:.2rem;
+		margin-bottom: .1rem;
+	}
+	.my-name{
+		height:.4rem;
+		line-height:.4rem;
+	}
+	.my-contractor{
+		height:.5rem;
+		line-height:.5rem;
+		font-size:.2rem;
+	}
+	.my-message{
+		height:.6rem;
+		width: 100%;
+		padding-left: 2%;
+	}
+	.my-message-left{
+		height:.6rem;
+		background-color: #F2F2F2;
+		border-radius: .3rem 0px 0px .3rem;
+		width:13%;
+		float: left;
+		line-height: .6rem;
+		padding-left: .3rem;
+		padding-right:.2rem;
+	}
+	.my-message-right{
+		height:.6rem;
+		background-color: #F2F2F2;
+		border-radius: 0px .3rem .3rem 0px;
+		width:83%;
+		float: left;
+		line-height: .6rem;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.certificate{
+		width:100%;
+		border-top:.06rem solid #F1F1F1;
+		padding-top:.2rem;
+	}
+	.certificate-list{
+		height:1.2rem;
+		border-bottom: .01rem solid #E6E6E6;
+		width:92%;
+		padding-left:.2rem;
+	}
+	.certificate-button{
+		width:90%;
+		height:.7rem;
+		background-color: #0663DA;
+		line-height: .7rem;
+		text-align: center;
+		color: white;
+		border-radius: .06rem;
+		position: fixed;
+		bottom:20px;
+		margin-top:.2rem;
+		left:5%;
+	}
+	.cover-div {
+		background: #000;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		filter: alpha(opacity=30);
+		opacity: 0.3;
+		z-index: 2;
+	}
+	.add-select {
+		width: 80%;
+		height: 3rem;
+		top: 50%;
+		left: 50%;
+		position: fixed;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		z-index: 3;
+		border-radius: .06rem;
+	}
+</style>
+<body style="background-color: #fff;">
+	<div class="mobile-wrap center">
+		<div class="user" id="userInfo" hidden="hidden">
+			<div class="user-inform" style="height:50%;">
+				<div class="user-info">
+					<div class="my-info">
+						<div class="my-name">
+							<span style="font-size:.34rem;font-weight: bold;" id="userName"></span>&nbsp;
+							<span style="color:#0663DA;" onclick="window.location.href = 'edit_info.html'" style="font-size: .22rem;">修改资料</span>
+						</div>
+						<div class="my-contractor" id="contractorName">
+
+						</div>
+					</div>
+					<div class="my-headimg">
+						<img id="headImg" src="" style="width:1rem;height:1rem;border-radius:.5rem;">
+					</div>
+				</div>
+				<div class="my-message" hidden="hidden">
+					<div class="my-message-left">
+						<img src="img/warning.png" style="width:.28rem;height:.28rem;">
+					</div>
+					<div id="scrollMessage" class="my-message-right">
+						<span id="message" class="message" style="margin-right: 20px;"></span>
+					</div>
+				</div>
+			</div>
+			<div id="certificate" class="certificate" style="position: relative;">
+				<div id="certificateTitle" class="certificate-title" style="height: .3rem;padding-left: .2rem;padding-bottom: .5rem;">
+					<div style="float: left;line-height: .26rem;"><img src="img/certificate_manage.png" style="width:.2rem;height:.2rem;"></div>
+					<div style="float: left;line-height: .3rem;margin-left:.06rem;">证书管理</div>
+				</div>
+				<div id="certificateList" style="position: absolute;top:.7rem;width:100vw;overflow: scroll;">
+
+				</div>
+				<div id="certificateButton" class="certificate-button" onclick="showAddDialog()">添加证书</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 遮罩层 -->
+	<div id="cover" class="cover-div" hidden="hidden">
+
+	</div>
+
+	<div class="add-select" hidden="hidden">
+		<div style="height: .5rem;width: 100%;text-align: right;padding:.2rem .2rem 0px 0px;">
+			<img src="img/cancel.png" style="height: .3rem;" onclick="cancelAdd()">
+		</div>
+		<div style="height: 1.29rem;width: 100%;text-align: center;line-height: 1.29rem;">选择录入证书性质</div>
+		<div style="margin-top: .4rem;height: .8rem;width: 100%;text-align: center;border-top:.01rem solid #F1F1F1;">
+			<div id="tempButton" style="width: 50%;height: .8rem;line-height: .8rem;float: left;color: #0663DA;border-right:.01rem solid #F1F1F1;">临时证书</div>
+			<div id="fullButton" style="width: 50%;height: .8rem;line-height: .8rem;float: left;">资质证书</div>
+		</div>
+	</div>
+
+</body>
+<script src="js/Swiper.js"></script><!--轮播库-->
+<script src="js/version-3.2.8.js"></script><!--封装函数-->
+</html>

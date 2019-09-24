@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- 通用Action -->
+	<bean id="common.commonDataAction" type="action" action="/common/data.do" class="com.cffc.manage.action.CommonDataAction" />
+	<bean id="common.getDictsAction" type="action" action="/common/get_dicts.do" class="com.haitsoft.framework.data.action.GetDictsAction" />
+	<bean id="common.getDictByCodeAction" type="action" action="/common/get_dict_by_code.do" class="com.haitsoft.framework.data.action.GetDictByCodeAction" />
+	<bean id="common.getSystemParamByCodeAction" type="action" action="/common/get_sysparam_by_code.do" class="com.haitsoft.framework.data.action.GetSystemParamByCodeAction" />
+
+	<!-- 登录相关 -->
+	<bean id="login.loginAction" type="action" action="/login/login.do" class="com.cffc.manage.action.LoginAction" />
+	<bean id="login.appLoginAction" type="action" action="/login/appLogin.do" class="com.cffc.app.action.AppLoginAction" />
+	<bean id="login.logoutAction" type="action" action="/login/logout.do" class="com.cffc.manage.action.LogoutAction" />
+
+	<!-- 上传文件 -->
+	<bean id="upload.uploadImgAction" type="action" action="/upload_img/data.do" class="com.cffc.manage.action.UploadImgAction" />
+
+	<!-- 导出 -->
+	<bean id="export.excelExportAction" type="action" action="/export/excel.do" class="ccom.tibet.manage.action.ExcelExportAction" />
+</beans>

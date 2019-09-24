@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <config resource="system/hex-login.xml" />
+    <config resource="system/hex-sys.xml" />
+    <config resource="system/hex-manage.xml" />
+    <config resource="system/hex-register.xml"/>
+    <config resource="role/hex-role.xml"/>
+    <config resource="teacher/hex-teacher.xml"/>
+    <config resource="student/hex-student.xml"/>
+</configs>

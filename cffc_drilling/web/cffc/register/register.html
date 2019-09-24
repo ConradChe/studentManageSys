@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html style="width: 100%;height:100%;">
+<head>
+<meta charset="UTF-8" />
+<meta name="format-detection" content="telephone=no">
+<title>川庆后台系统管理</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/style1.css?v=201908155" />
+    <script type="text/javascript" src="../../frame/include.js"></script>
+    <script id="haitFrameScript" type="text/javascript" src="../manage/js/user.js"></script>
+<script type="text/javascript">
+	$(document).keydown(function(event) {
+		if (event.keyCode == 13) {
+			loginFormSubmit();
+			return false;
+		}
+	});
+
+	function loginFormSubmit() {
+		var registerName = document.registerForm["register_name"].value;
+		var registerTelephone = document.registerForm["register_telephone"].value;
+		var registerPwd = document.registerForm["register_pwd"].value;
+		var confirmPwd = document.registerForm["confirm_pwd"].value;
+        var roleId = document.registerForm["roleId"].value;
+		//手机号正则
+		var TEL_REGEXP = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+		// 进行基本有效性验证
+		if (registerName == null || registerName.length == 0) {
+			alert("用户名不能为空!");
+			return;
+		}
+		if (registerTelephone == null || registerTelephone.length == 0) {
+			alert("手机号不能为空!");
+			return;
+		}
+		if (registerPwd == null || registerPwd.length == 0) {
+			alert("密码不能为空!");
+			return;
+		}
+		if (confirmPwd == null || confirmPwd.length == 0) {
+			alert("确认密码不能为空!");
+			return;
+		}
+		//验证手机号
+		if(!TEL_REGEXP.test(registerTelephone)){
+			alert("手机号输入错误，请输入11位的手机号");
+			return;
+		}
+
+		// 进行更多验证
+		if (registerName.indexOf("'") >= 0 || registerPwd.indexOf("'") >= 0||confirmPwd.indexOf("'")>=0) {
+			alert("用户名、密码和确认密码中不允许存在单引号，请检查!");
+			return;
+		}
+		if(registerPwd != confirmPwd){
+			alert("两次密码输入不正确，请重新输入");
+			return;
+		}
+
+        var params = {};
+        params.login_code = registerTelephone;
+        params.user_name = registerName;
+        params.login_pass = registerPwd;
+        params.role_id = roleId;
+        params.role_name = roleId=="1"?"管理员":(roleId=="2"?"教师":"学生");
+        params.funcId = "hex_register_userRegisterFunction";
+
+        // 执行这个操作
+        request({
+            data : [ params ],
+            func : function(data) {
+                if(data.responses[0].flag <= 0){
+                    alert(data.responses[0].message);
+                    return;
+                }
+                alert("注册成功");
+                window.location.href="../login/login.html";
+            }
+        });
+	}
+    function setTop(){
+        var height = parseFloat(document.getElementById("body").offsetHeight);
+        var top = (height - 526) / 2;
+        $(".login_form").css("top", top);
+    }
+
+    $(document.body).ready(function(){
+        var loginCode = window.localStorage.getItem("login_code");
+        if(loginCode != null && loginCode.length > 0) {
+            $("input[name=login_name]").val(loginCode);
+        }
+        setTop();
+
+        window.onresize = function(){
+            setTop();
+        };
+    });
+</script>
+</head>
+<body style="overflow: hidden ">
+	<div class="header_hurdle">
+		<div style="float:left;width:400px;height:48px; text-align: left;margin-top: 25px;margin-left: 10px">
+			<span class="company_name_cn"></span><br/><span class="company_name_en"></span></div>
+	</div>
+	<div class="container">
+		<div class="register_form">
+			<form style="width: 100%;height: 100%" name="registerForm" method="post" action="../register.do">
+				<input type="hidden" name="validate_code_flag" />
+
+				<div style="text-align: left">
+					<p class="register_form_title">用户注册</p>
+				</div>
+				<div style="margin-left: 10px;margin-top: 10px">
+					<span class="user_span">用户名&nbsp;&nbsp;&nbsp;<input class="input_us" type="text"  name="register_name" placeholder="请输入用户名" autocomplete="off" /></span>
+				</div>
+				<div style="margin-left: 10px">
+					<span class="user_span">手机号&nbsp;&nbsp;&nbsp;<input class="input_us" type="text" maxlength="11" name="register_telephone" placeholder="请输入手机号" autocomplete="off" /></span>
+				</div>
+				<div style="margin-left: 10px">
+					<span class="user_span">选择角色&nbsp;&nbsp;
+						<select class="role_select"  mode="local" name="roleId">
+							<option value="1" style="font-size:16px;">管理员</option>
+							<option value="2" style="font-size:16px;">教师</option>
+							<option value="3" style="font-size:16px;">学生</option>
+						</select>
+					</span>
+				</div>
+
+				<div style="margin-left: 10px">
+					<span class="user_span">密&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;&nbsp;<input
+							class="input_us" type="password" maxlength="20" name="register_pwd" placeholder="请输入密码" /></span>
+				</div >
+				<div style="margin-left: 10px">
+					<span class="user_span">确认密码&nbsp;&nbsp;&nbsp;<input
+							class="input_us" type="password" maxlength="20" name="confirm_pwd" placeholder="请确认密码" /></span>
+				</div >
+				<input class="btn_register "
+					type="button" value="注册" onclick="loginFormSubmit()">
+				<div style="clear: both;"></div>
+				<div class="user_register">
+					<span>已有账户，马上去</span>
+				</div>
+				<div class="user_login_href">
+					<a href="../login/login.html">登录</a>
+				</div>
+
+			</form>
+		</div>
+
+
+	</div>
+
+	<div class="cover-div">
+		<img src="images/beijing01.png" style="width:100vw;min-width:1280px;min-height:720px;">
+	</div>
+
+</body>
+</html>

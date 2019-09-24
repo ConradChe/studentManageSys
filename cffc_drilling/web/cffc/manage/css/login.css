@@ -1,0 +1,294 @@
+@CHARSET "UTF-8";
+
+html,body {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 14px;
+	font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei",
+		"Hiragino Sans GB", tahoma, arial, "\5B8B\4F53";
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft YaHei';
+	outline: none;
+}
+
+img {
+	border: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 500;
+	color: #000;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.cls {
+	clear: both;
+}
+
+.hide {
+	display: none;
+}
+
+.font-size-small {
+	font-size: 12px;
+}
+
+.font-size-normal {
+	font-size: 14px;
+}
+
+.font-size-medium {
+	font-size: 16px;
+}
+
+.font-size-large {
+	font-size: 18px;
+}
+
+/*button*/
+.hait-button {
+	width: auto;
+	padding-left: 17px;
+	padding-right: 17px;
+	height: 30px;
+	color: black;
+	cursor: pointer;
+	font-size: 12px;
+	border: 1px solid #dddddd;
+	background-color: #f7f7f7;
+}
+
+.hait-button[disabled] {
+	color: #bfbbcc;
+	cursor: default;
+}
+
+.hait-button[disabled]:hover {
+	background-color: #f7f7f7;
+}
+
+.hait-button:hover {
+	background-color: white;
+}
+
+.hait-button.stress {
+	color: white;
+	border: 1px solid #0099c9;
+	background-color: #0099c9;
+}
+
+.hait-button.stress:hover {
+	background-color: #00b5d4;
+}
+
+/*Form*/
+.hait-input {
+	width: 240px;
+	height: 28px;
+	padding: 0px 3px 0px 3px;
+	border: 1px solid #cccccc;
+	font-size: 12px;
+}
+
+.hait-input:hover {
+	border: 1px solid #57afe6;
+}
+
+/*page-head*/
+.y-row {
+	min-width: 1000px;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	zoom: 1;
+}
+
+#header {
+	width: 100%;
+	height: 74px;
+	border-bottom: 1px solid #e3e3e3;
+	background-color: #fff;
+	padding: 0px;
+}
+
+#header .header-layout {
+	padding: 13px 0;
+	overflow: hidden;
+}
+
+#header .header-layout .logo-title {
+	float: left;
+	display: inline-block;
+	width: auto;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 2px;
+	color: #3c3c3c;
+}
+
+#header .header-layout .header-nav {
+	width: auto;
+	height: 14px;
+	float: right;
+	line-height: 14px;
+	margin-top: 10px;
+	margin-right:10px;
+}
+
+#header .header-layout .header-nav li.nav-first {
+	border-left: 0;
+}
+
+#header .header-layout .header-nav li {
+	float: left;
+	padding: 0 0 0 10px;
+	margin-right: 10px;
+	border-left: 1px solid #4d4d4d;
+}
+
+#header .header-layout .header-nav li a {
+	color: #666;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+/*page-content*/
+.content {
+	position: relative;
+	margin-top: 100px;
+	min-height: 530px;
+	vertical-align: middle;
+}
+
+.content .ads {
+	margin-left: 100px;
+	float: left;
+}
+
+.content #login-module {
+	position: absolute;
+	border: 1px solid #D4D4D4;
+	padding-top: 20px;
+	right: 130px;
+	margin-bottom: 10px;
+	margin-top: 10px; background-color : #fff;
+	min-width: 292px;
+	min-height: 300px;
+	background: rgba(255, 255, 255, 0.3);
+	z-index: 2;
+	background-color: #fff;
+}
+
+.content #login-module #login-iframe {
+	position: relative;
+	padding: 10px 20px;
+	overflow: hidden;
+}
+
+#login-wrap {
+	position: relative;
+}
+
+#login-form {
+	position: relative;
+	font: 400 12px arial;
+	display: block;
+}
+
+#login-title {
+	font-size: 16px;
+	font-weight: 700;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.form-error {
+	display: none;
+	padding-left: 32px;
+	border: 1px solid #f6c8b5;
+	background: #fceee8;
+	padding: 4px 12px;
+	line-height: 18px;
+	font-family: Tahoma, Helvetica, Arial, \5b8b\4f53;
+	color: red;
+}
+
+#login-content label {
+	font-weight: 700;
+}
+
+#login-content .fm-label {
+	padding: 8px 0 2px;
+}
+
+#login-content .fm-field {
+	padding: 2px 0 8px;
+}
+
+#login-content .fm-field-wrap {
+	padding-right: 14px;
+}
+
+.content #login-module .agreement {
+	width: 240px;
+	margin-left:20px;
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+.content #login-module .agreement input {
+	height: 13px;
+	vertical-align: middle;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+/*page-foot*/
+.copyright-100 {
+	clear: both;
+	background: #fff;
+	border-top: 1px solid #e5e5e5;
+}
+
+.copyright-100 .copyright p {
+	padding: 5px 0;
+}
+
+.copyright-100 .copyright p a {
+	padding: 0 5px;
+	color: #b3b3b3;
+}
+
+.copyright-100 .copyright p.big a {
+	color: #666;
+}
+
+.copyright-100 .copyright p.big {
+	font-size: 14px;
+}

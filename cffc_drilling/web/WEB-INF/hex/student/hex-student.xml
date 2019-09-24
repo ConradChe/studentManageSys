@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hexs>
+
+    <hex id="hex_student_queryStudent" name="查询学生表" type="jdbc" operate="sql_query">
+        <param name="user_id" type="char" />
+        <param name="class_name" type="varchar" />
+        <param name="student_no" type="char" />
+        <param name="student_name" type="varchar" />
+        <param name="mobile_phone" type="varchar" />
+        <sql>
+            select *
+            from t_student
+            where 1=1
+            <if test="#user_id != null">
+                AND user_id = '#user_id'
+            </if>
+            <if test="#class_name != null">
+                AND class_name LIKE '%#class_name%'
+            </if>
+            <if test="#student_no != null">
+                AND student_no LIKE '%#student_no%'
+            </if>
+            <if test="#student_name != null">
+                AND student_name LIKE '%#student_name%'
+            </if>
+            <if test="#mobile_phone != null">
+                AND mobile_phone LIKE '%#mobile_phone%'
+            </if>
+
+        </sql>
+    </hex>
+
+    <hex id="hex_student_queryStudentById" name="通过id查找学生" type="jdbc" operate="query_all" table="t_student">
+        <param name="user_id" type="char"/>
+    </hex>
+
+    <hex id="hex_student_queryStudentByNo" name="通过学生学号查找" type="jdbc" operate="query_all" table="t_student">
+        <param name="student_no" type="char"/>
+    </hex>
+
+    <hex id="hex_student_insertStudent" name="新增学生" type="jdbc" operate="insert" table="t_student">
+        <param name="user_id" type="char"/>
+        <param name="student_no" type="char"/>
+        <param name="student_name" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="mobile_phone" type="varchar"/>
+    </hex>
+
+    <hex id="hex_student_resetStudentFunction" name="分配学生function" type="function" operate="com.cffc.manage.function.student.ResetStudentFunction">
+        <param name="user_id" type="char" primary="true"/>
+        <param name="student_no" type="varchar"/>
+        <param name="class_id" type="char"/>
+        <param name="class_name" type="varchar"/>
+        <param name="start_time" type="date"/>
+    </hex>
+
+    <hex id="hex_student_resetStudent" name="分配学生" type="jdbc" operate="update" table="t_student">
+        <param name="user_id" type="char" primary="true"/>
+        <param name="student_no" type="varchar"/>
+        <param name="class_id" type="char"/>
+        <param name="class_name" type="varchar"/>
+        <param name="start_time" type="date"/>
+    </hex>
+
+    <hex id="hex_student_deleteStudent" name="删除学生" type="jdbc" operate="delete" table="t_student">
+        <param name="user_id" type="char"/>
+    </hex>
+
+    <hex id="hex_student_queryStudentOfTeacherFunction" name="查询教师管理下的学生function" type="function" operate="com.cffc.manage.function.student.QueryStudentOfTeacherFunction">
+        <param name="student_no" type="char" />
+        <param name="student_name" type="varchar" />
+        <param name="mobile_phone" type="varchar" />
+    </hex>
+
+    <hex id="hex_student_queryStudentOfTeacher" name="查询教师管理下的学生" type="jdbc" operate="sql_query">
+        <param name="user_id" type="char" />
+        <param name="student_no" type="char" />
+        <param name="student_name" type="varchar" />
+        <param name="mobile_phone" type="varchar" />
+        <sql>
+            SELECT
+                s.*
+            FROM
+                t_student s
+            INNER JOIN
+                t_teacher t
+            ON
+                s.class_id = t.class_id
+            AND
+                t.user_id = '#user_id'
+            <if test="#student_no != null">
+                AND s.student_no LIKE '%#student_no%'
+            </if>
+            <if test="#student_name != null">
+                AND s.student_name LIKE '%#student_name%'
+            </if>
+            <if test="#mobile_phone != null">
+                AND s.mobile_phone LIKE '%#mobile_phone%'
+            </if>
+        </sql>
+    </hex>
+
+    <hex id="hex_student_queryStudentDetails" name="联表查询学生详情" type="jdbc" operate="sql_query_all">
+        <param name="user_id" type="char" />
+        <sql>
+            SELECT
+                s.student_no,s.student_name,u.id_card,s.gender,s.mobile_phone,s.class_name,s.start_time
+            FROM
+                t_student s
+            INNER JOIN
+                t_sys_user u
+            ON
+                s.user_id = u.user_id
+            AND s.user_id = '#user_id'
+        </sql>
+    </hex>
+
+    <hex id="hex_student_updateStudentDetailsFunction" name="学生修改个人信息" type="function" operate="com.cffc.manage.function.student.UpdateStudentDetailsFunction">
+        <param name="user_id" type="char"/>
+        <param name="student_no" type="char"/>
+        <param name="student_name" type="varchar"/>
+        <param name="start_time" type="date"/>
+        <param name="id_card" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="mobile_phone" type="varchar"/>
+    </hex>
+
+    <hex id="hex_student_updateStudent" name="更新学生" type="jdbc" operate="update" table="t_student">
+        <param name="user_id" type="char" primary="true"/>
+        <param name="student_name" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="mobile_phone" type="varchar"/>
+        <param name="start_time" type="date"/>
+    </hex>
+
+</hexs>

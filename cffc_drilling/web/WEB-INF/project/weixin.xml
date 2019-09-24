@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+<!-- 登录相关 -->
+	<bean id="weixin.loginAction" type="action" action="/wechat/login.do" class="com.cffc.wechat.action.LoginAction" />
+	<!-- 微信授权 -->
+	<bean id="wechat.WxAuthAction" type="action" action="/wechat/wxauth.do" class="com.cffc.wechat.action.WxAuthAction" />
+	<!-- 微信授权回调 -->
+	<bean id="wechat.WxAuthBackAction" type="action" action="/wechat/wxBack.do" class="com.cffc.wechat.action.WxAuthBackAction" />
+	<!-- 微信JsApi基本配置 -->
+	<bean id="wechat.WxJsApiConfigAction" type="action" action="/wechat/wxConfig.do" class="com.cffc.wechat.action.WxJsApiConfigAction" />
+	<!-- 微信图片上传 -->
+	<bean id="wechat.WxUploadImgAction" type="action" action="/wechat/wxUploadImg.do" class="com.cffc.wechat.action.WxUploadImgAction" />
+	<!-- 微信验证token有效性 -->
+	<bean id="wechat.WxCheckTokenAction" type="action" action="/wechat/wxCheckToken.do" class="com.cffc.wechat.action.WxCheckTokenAction" />
+</beans>

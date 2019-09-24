@@ -1,0 +1,413 @@
+﻿<!doctype html>
+<html>
+<head design-width="640">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>添加证书</title>
+    <link rel="stylesheet" href="css/style.css?v=20190808"/><!--页面样式-->
+    <link rel="stylesheet" href="css/common.css"/><!--常用样式-->
+    <link rel="stylesheet" href="css/animate.min.css"/><!--CSS3动画库-->
+    <script src="js/auto-size.js"></script><!--设置字体大小-->
+    <script src="js/jquery-2.2.4.min.js"></script><!--jQ库-->
+    <script src="../frame/includeNoCss.js"></script>
+    <script src="js/Swiper.js"></script><!--轮播库-->
+    <script src="js/version-3.2.8.js"></script><!--封装函数-->
+    <script src="../cffc/util/util.js?v=20190801"></script><!--封装函数-->
+    <script src="js/version-3.2.8.js"></script><!--封装函数-->
+    <script src="full_certificate.js?v=20190916"></script><!--封装函数-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script type="text/javascript" src="js/mobiscroll.custom.min.js"></script>
+    <link href="css/mobiscroll.custom.min.css?v=201908124" rel="stylesheet" type="text/css"/>
+</head>
+<style>
+    .selectFrame {
+        border: 0;
+        background: transparent;
+        width: 360px;
+    }
+
+    .inputFrame {
+        /*text-align: right;*/
+        width: 420px;
+    }
+
+    #the-map {
+        position: absolute;
+        z-index: 100;
+        height: 100%;
+        width: 100%;
+        right: 100%;
+        top: 0;
+        transition: all 0.3s;
+        background-color: white;
+    }
+
+    #the-map #container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .gender-select {
+        width: 100%;
+        height: 40%;
+        top: 60%;
+        left: 0;
+        position: absolute;
+        background-color: white;
+        z-index: 3;
+    }
+
+    .cover-div {
+        background: #000;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        filter: alpha(opacity=30);
+        opacity: 0.3;
+        z-index: 2;
+    }
+
+    .delete-img {
+        width: 80%;
+        height: 2.5rem;
+        top: 50vh;
+        left: 50vw;
+        position: fixed;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: white;
+        z-index: 3;
+        border-radius: .06rem;
+    }
+
+    .mbsc-ios .dw-sel {
+        text-align: center;
+    }
+
+    .mbsc-ios .dw-li {
+        font-size: .26rem;
+        text-align: center;
+    }
+
+    .dwwl0 .dw-ul .dw-li .dw-i:not(:empty):after {
+        content: "年";
+    }
+
+    .dwwl1 .dw-ul .dw-li .dw-i:not(:empty):after {
+        content: "月";
+    }
+
+    .right-icon {
+        width: .14rem;
+        height: .26rem;
+    }
+
+    .select-button {
+        float: left;
+        text-align: center;
+        margin: 0px 7% 0px 7%;
+        width: 36%;
+        height: .7rem;
+        line-height: .7rem;
+        background-color: #F1F1F1;
+        border-radius: .35rem;
+    }
+
+    .select-button.stress {
+        color: white;
+        background-color: #0663DA;
+    }
+    .loading-img{
+        width: 50%;
+        height: 1rem;
+        top: 50vh;
+        left: 50vw;
+        position: fixed;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: black;
+        opacity:0.7;
+        z-index: 3;
+        border-radius: .1rem;
+    }
+
+    @-webkit-keyframes rotation{
+        from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}
+    }
+    .imgRotate{
+        -webkit-transform: rotate(360deg);
+        animation: rotation 1s linear infinite;
+        -moz-animation: rotation 1s linear infinite;
+        -webkit-animation: rotation 1s linear infinite;
+        -o-animation: rotation 1s linear infinite;
+    }
+
+</style>
+<body style="background-color: white;">
+<div class="mobile-wrap center">
+    <div class="appeal" style="border-top:.08rem solid #F1F1F1;padding-top:0px;">
+
+        <div class="examination-box">
+            <div class="examination-txt fl">
+                持有人
+            </div>
+            <div class="examination-fr fr">
+                <div class="examination-sele fl">
+                    <input type="text" style="text-align: right;" id="userName" readonly="readonly" value=""
+                           placeholder="请输入姓名"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="examination-box">
+            <div class="examination-txt fl">
+                工作单位
+            </div>
+            <div class="examination-fr fr">
+                <div class="examination-sele fl">
+                    <input type="text" style="text-align: right;" id="contractorName" readonly="readonly" value=""
+                           placeholder="请输入工作单位"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="examination-box">
+            <div class="examination-txt fl">
+                职务岗位
+            </div>
+            <div class="examination-fr fr">
+                <div class="examination-sele fl">
+                    <div style="background-image: none;float: left;width: 90%;">
+                        <input type="text" id="postId" hidden="hidden"/>
+                        <input type="text" style="text-align: right;" id="postName" readonly="readonly" value=""
+                               placeholder="请选择"
+                               onclick="selectPost()"/>
+                    </div>
+                    <div id="postButton" class="appeal-addr fr" onclick="selectPost()" style="line-height: 1rem;"><img
+                            src="img/right.png?v=20190731" class="right-icon"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="examination-box">
+            <div class="examination-txt fl">
+                证书名称
+            </div>
+            <div class="examination-fr fr">
+                <div class="examination-sele fl">
+                    <div class="examination-sele fl">
+                        <div style="background-image: none;float: left;width: 90%;">
+                            <input type="text" id="certificateId" hidden="hidden"/>
+                            <input type="text" style="text-align: right;" id="certificateName" readonly="readonly"
+                                   value="" placeholder="请选择"
+                                   onclick="selectCertificate()"/>
+                        </div>
+                        <div id="certificateButton" class="appeal-addr fr" onclick="selectCertificate()" style="line-height: 1rem;"><img
+                                src="img/right.png?v=20190731" class="right-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="examination-box">
+            <div class="examination-txt fl">
+                发证单位
+            </div>
+            <div class="examination-fr fr">
+                <div class="examination-sele fl">
+                    <div class="examination-sele fl">
+                        <div style="background-image: none;float: left;width: 90%;">
+                            <input type="text" style="text-align: right;" id="certifyingName" readonly="readonly"
+                                   value="" placeholder="请选择"
+                                   onclick="selectCertifying()"/>
+                        </div>
+                        <div class="appeal-addr fr" onclick="selectCertifying()" style="line-height: 1rem;"><img
+                                src="img/right.png?v=20190731" class="right-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="selectButton" style="width: 90%;margin-top:.7rem;">
+            <div class="select-button stress" onclick="manualInput()">
+                手动输入
+            </div>
+            <div class="select-button" onclick="autoScan()">
+                自动扫描
+            </div>
+        </div>
+
+
+        <div id="fullInfo" hidden="hidden">
+            <div class="examination-box">
+                <div class="examination-txt fl">
+                    证书编号
+                </div>
+                <div class="examination-fr fr">
+                    <div class="examination-sele fl">
+                        <input type="text" style="text-align: right;" id="certificateCode" value=""
+                               placeholder="请输入证书编号"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="examination-box">
+                <div class="examination-txt fl">
+                    起效时间
+                </div>
+                <div class="examination-fr fr">
+                    <div class="examination-sele fl">
+                        <div class="examination-sele fl">
+                            <div style="background-image: none;float: left;width: 90%;">
+                                <input type="text" style="text-align: right;" id="onsetTime" readonly="readonly"
+                                       value=""
+                                       placeholder="请选择"
+                                       readonly="readonly"/>
+                            </div>
+                            <div class="appeal-addr fr" style="line-height: 1rem;"><img
+                                    src="img/right.png?v=20190731" class="right-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="examination-box">
+                <div class="examination-txt fl">
+                    失效时间
+                </div>
+                <div class="examination-fr fr">
+                    <div class="examination-sele fl">
+                        <div style="background-image: none;float: left;width: 90%;">
+                            <input type="text" id="failureTime" style="text-align: right;" readonly="readonly" value=""
+                                   placeholder="请选择"
+                                   readonly="readonly"/>
+                        </div>
+                        <div class="appeal-addr fr" style="line-height: 1rem;"><img
+                                src="img/right.png?v=20190731" class="right-icon"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="examination-box">
+                <div class="examination-txt fl">
+                    复审时间
+                </div>
+                <div class="examination-fr fr">
+                    <div class="examination-sele fl">
+                        <div style="background-image: none;float: left;width: 90%;">
+                            <input type="text" id="reviewTime" style="text-align: right;" readonly="readonly" value=""
+                                   placeholder="请选择(选填)"
+                                   readonly="readonly"/>
+                        </div>
+                        <div class="appeal-addr fr" style="line-height: 1rem;"><img
+                                src="img/right.png?v=20190731" class="right-icon"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="examination-box" style="height:2.4rem;border-bottom: 0px;position: relative;">
+                <div style="height:2rem;margin-top: .36rem;">
+                    <span style="font-size: .26rem;">证书图片</span>&nbsp;&nbsp;<span
+                        style="color: #F64744;font-size:.22rem;">(*图片大小不超过2M)</span><br>
+                    <div id="showImage" style="margin-top: .2rem;"></div>
+                    <div id="imageUrl"></div>
+                    <div style="margin-top: .2rem;">
+                        <img id="addImage" src="img/upload_img.png" style="height: 1.5rem;"
+                             onclick="openChooseImg(this.id)">
+                    </div>
+                </div>
+            </div>
+
+            <div style="width:100vw;height:.1rem;background-color:#F1F1F1;position: absolute;left:0px;" class="check-true-box">
+
+            </div>
+
+
+            <input hidden="hidden" type="text" id="isCanCopy" value="2">
+
+            <div class="examination-box check-true-box" style="margin-top:.1rem;">
+                <div class="examination-txt fl">
+                    验真方式
+                </div>
+                <div class="examination-fr fr">
+                    <div class="examination-sele fl">
+                        <input type="text" style="text-align: right;" id="checkTrueLink" value=""
+                               placeholder="请输入(选填)"/>
+                    </div>
+                </div>
+            </div>
+            <div class="examination-box" style="height:2.6rem;border:none;">
+                <div style="height:2.1rem;margin-top: .36rem;" class="check-true-box">
+                    <div>
+                        <span style="font-size: .26rem;">验真图片</span>
+                        <span style="font-size: .26rem;color:#999999;">(选填)</span>&nbsp;&nbsp;
+                        <span style="color: #F64744;font-size:.22rem;">(*图片大小不超过2M)</span><br>
+                        <div id="showCheckImage" style="margin-top: .2rem;margin-bottom: .2rem;"></div>
+                        <div id="checkImageUrl"></div>
+                        <input hidden="hidden" type="text" id="checkImage">
+                        <div style="margin-top: .2rem;margin-bottom: .2rem;">
+                            <img id="addCheckImage" src="img/upload_img.png" style="height: 1.5rem;"
+                                 onclick="openChooseImg(this.id)">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height:.5rem;border:none;" class="check-true-box">
+                    <span style="color: #F64744;font-size:.22rem;">*保证个人所录数据的真伪，若为假则后果自负</span>
+                </div>
+
+                <div class="appeal-submit" style="margin-bottom:.5rem;">
+                    <input type="button" value="保存" onclick="submitUserInfo()"/>
+                </div>
+            </div>
+        </div>
+    </div><!--mobile_wrap-->
+
+    <div id="certificateList" style="width: 100%;height:100%;top:0;left:0;position: fixed;" hidden="hidden">
+        <!-- 选择证书 -->
+    </div>
+
+    <div id="postList" style="width: 100%;height:100%;top:0;left:0;position: fixed;" hidden="hidden">
+        <!-- 选择岗位 -->
+    </div>
+
+    <div id="certifyingList" style="width: 100%;height:100%;top:0;left:0;position: fixed;" hidden="hidden">
+        <!-- 选择发证单位 -->
+    </div>
+
+    <!-- 遮罩层 -->
+    <div id="cover" class="cover-div" hidden="hidden">
+
+    </div>
+
+    <div class="delete-img" hidden="hidden">
+        <div style="height: 1.69rem;width: 100%;text-align: center;line-height: 1.69rem;">是否删除这张图片</div>
+        <div style="height: .8rem;width: 100%;text-align: center;border-top:.01rem solid #F1F1F1;">
+            <div onclick="deleteImage()"
+                 style="width: 50%;height: .8rem;line-height: .8rem;float: left;color: #0663DA;border-right:.01rem solid #F1F1F1;">
+                确认
+            </div>
+            <div onclick="cancelDelete()" style="width: 50%;height: .8rem;line-height: .8rem;float: left;">取消</div>
+        </div>
+    </div>
+
+    <div class="loading-img" id="loading" hidden="hidden">
+        <img src="img/loading.png" class="imgRotate" style="width:.5rem;height:.5rem;position: fixed;left:.35rem;top:.25rem;">
+        <div style="height: 1rem;width: 100%;text-align: center;line-height: 1rem;color:white;">识别中...</div>
+    </div>
+</div>
+
+</body>
+</html>

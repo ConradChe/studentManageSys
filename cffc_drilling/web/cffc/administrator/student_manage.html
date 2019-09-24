@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script id="haitFrameScript" type="text/javascript" src="../../frame/include.js"></script>
+    <script type="text/javascript" src="js/student_manage.js"></script>
+</head>
+<body>
+<div class="container" style="width:97%">
+    <div class="title-bar">
+        <div class="title">学生管理</div>
+    </div>
+    <div class="search-bar">
+        <span class="fl">查询条件：</span>
+        <select id="searchColumn" mode="local" hait-type="hait.form.field.SelectField" default-value="student_no">
+            <option value="class_name">班级</option>
+            <option value="student_no">学生学号</option>
+            <option value="student_name">学生姓名</option>
+            <option value="mobile_phone">电话</option>
+        </select>
+        <span class="fl">内容</span>
+        <input id="searchValue" type="text" hait-type="hait.form.field.TextField"/>
+
+        <button class="hait-button icon-search" onclick="searchStudentByConditions()">查询</button>
+        <button class="hait-button icon-see-details" onclick="showAddStudentDialog()">分配学生</button>
+        <button class="hait-button icon-search" onclick="searchStudentDetails()">学生详情</button>
+        <button class="hait-button icon-delete" onclick="doDeleteStudent()">删除</button>
+    </div>
+    <div class="cls" style="margin-top: 10px"></div>
+    <table id="studentGrid" hait-type="hait.grid.Grid" mode="func" func-id="hex_student_queryStudent"
+           onrowclick="studentGridRowClick" limit="5" title-sort="true" style="margin-top: 20px">
+        <tbody>
+        <tr>
+            <th field="student_no">学生学号</th>
+            <th field="student_name">学生姓名</th>
+            <th field="mobile_phone">手机</th>
+            <th field="gender">性别</th>
+            <th field="class_name">所属班级</th>
+            <th field="start_time">入学时间</th>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="studentOperateDialog" hait-type="hait.dialog.Dialog"title="添加学生" style="width: 800px; height: 430px;">
+        <div>
+            <form id="studentOperateForm" hait-type="hait.form.Form" action="#" method="post">
+                <table border="0" width="100%">
+                    <tr>
+                        <td>学生学号</td>
+                        <td>
+                            <input name="student_no" type="text" hait-type="hait.form.field.TextField"
+                                   required="true" placeholder="请输入学生学号"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>入学时间</td>
+                        <td>
+                            <input type="text" name="start_time" hait-type="hait.form.field.DateField"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>所属班级</td>
+                        <td colspan="3">
+                            <select id="classId" mode="local" hait-type="hait.form.field.SelectField" default-value="1">
+                                <option value="1">1班</option>
+                                <option value="2">2班</option>
+                                <option value="3">3班</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="buttons">
+            <button>关闭</button>
+            <button id="mainDealBtn" stress="true" onclick="saveTeacherData()">提交</button>
+        </div>
+    </div>
+    <div id="studentOperateDialog1" hait-type="hait.dialog.Dialog"title="学生详情" style="width: 800px; height: 430px;">
+        <div>
+            <form id="studentOperateForm1" hait-type="hait.form.Form" action="#" method="post">
+                <table border="0" width="100%">
+                    <tr>
+                        <td>学生学号</td>
+                        <td>
+                            <input name="student_no" type="text" hait-type="hait.form.field.TextField"
+                                   disabled="disabled"/>
+                        </td>
+                        <td>学生姓名</td>
+                        <td>
+                            <input name="student_name" type="text" hait-type="hait.form.field.TextField"
+                                   disabled="disabled"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>入学时间</td>
+                        <td>
+                            <input type="text" name="start_time" hait-type="hait.form.field.DateField" disabled="disabled"/>
+                        </td>
+                        <td>身份证号</td>
+                        <td>
+                            <input name="id_card" type="text" hait-type="hait.form.field.TextField"
+                                   disabled="disabled"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>所属班级</td>
+                        <td>
+                            <input name="class_name" type="text" hait-type="hait.form.field.TextField"
+                                   disabled="disabled"/>
+                        </td>
+                        <td>性别</td>
+                        <td>
+                            <input name="gender" type="text" hait-type="hait.form.field.TextField"
+                                   disabled="disabled"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电话</td>
+                        <td colspan="3">
+                            <input name="mobile_phone" type="text" hait-type="hait.form.field.TextField"
+                                   disabled="disabled"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="buttons">
+            <button>关闭</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

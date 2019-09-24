@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账号管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="frame/include.js"></script>
+    <script type="text/javascript" src="frame/includeNoCss.js"></script>
+</head>
+<body>
+<div class="container" style="width:97%">
+    <div class="title-bar">
+        <div class="title">学员信息管理</div>
+    </div>
+    <div class="search-bar">
+        <span class="fl">查询条件：</span>
+        <select id="searchColumn" mode="local" hait-type="hait.form.field.SelectField" default-value="login_code">
+            <option value="login_code">账号</option>
+            <option value="user_name">姓名</option>
+            <option value="mobile_phone">电话</option>
+        </select>
+        <span class="fl">内容</span>
+        <input id="searchValue" type="text" hait-type="hait.form.field.TextField"/>
+
+        <button class="hait-button icon-search" onclick="searchUserByConditions()">查询</button>
+        <button class="hait-button icon-see-details" onclick="showAddUserDialog()">添加用户</button>
+        <button class="hait-button icon-modification" onclick="showModifyUserDialog()">编辑</button>
+        <button class="hait-button icon-reset" onclick="showModifyChangePsw()">重置密码</button>
+        <button class="hait-button icon-delete" onclick="doDeleteUser()">删除</button>
+    </div>
+    <div class="cls" style="margin-top: 10px"></div>
+    <table id="studentGrid" hait-type="hait.grid.Grid" mode="func" func-id="hex_login_queryUser"
+           onrowclick="userGridRowClick" limit="5" title-sort="true" style="margin-top: 20px">
+        <tbody>
+        <tr>
+            <th field="login_code">登录名</th>
+            <th field="user_name">姓名</th>
+            <th field="mobile_phone">手机</th>
+            <th field="gender">性别</th>
+            <th field="id_card">身份证</th>
+            <th field="role_name">角色</th>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="studentOperateDialog" hait-type="hait.dialog.Dialog"title="添加学生" style="width: 800px; height: 430px;">
+        <div>
+            <form id="studentOperateForm" hait-type="hait.form.Form" action="#" method="post">
+                <table border="0" width="100%">
+                    <tr>
+                        <td>学生姓名</td>
+                        <td>
+                            <input name="student_name" type="text" hait-type="hait.form.field.TextField"
+                                   required="true" placeholder="请输入学生姓名"/>
+                        </td>
+                        <td>学生学号</td>
+                        <td>
+                            <input name="student_no" type="text" hait-type="hait.form.field.TextField"
+                                   required="true" placeholder="请输入学生学号"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号码</td>
+                        <td>
+                            <input name="phone_number" type="text" hait-type="hait.form.field.TextField"
+                                   required="true" placeholder="请输入联系方式"/>
+                        </td>
+                        <td>学生性别</td>
+                        <td>
+                            <select name="student_sex" hait-type="hait.form.field.RadioGroupField" default-value="男">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>入学时间：</td>
+                        <td>
+                            <input name="start_time" type="text" hait-type="hait.form.field.DateField"/>
+                        </td>
+                        <td>毕业时间：</td>
+                        <td>
+                            <input name="end_time" type="text" hait-type="hait.form.field.DateField"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>班级</td>
+                        <td>
+                            <input name="student_class" type="text" hait-type="hait.form.field.TextField"
+                                   required="true" placeholder="请输入学生班级"/>
+                        </td>
+                        <td>上传头像：</td>
+                        <td>
+                            <input name="student_photo" type="text" limit="1"
+                                   hait-type="hait.form.field.ImageUploadField" purpose="HEAD_IMG"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="buttons">
+            <button>关闭</button>
+            <button id="mainDealBtn" stress="true" onclick="saveUserData()">提交</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hexs>
+    <hex id="hex_login_loginByCodeAndPass" name="验证系统用户信息" type="jdbc" operate="sql_query_all">
+        <param name="login_code" type="varchar" />
+        <param name="login_pass" type="md5" />
+        <sql>
+            select user_id from t_sys_user
+            where user_state = 1 and login_code = '#login_code' and login_pass = '#login_pass'
+        </sql>
+    </hex>
+
+    <hex id="hex_login_loginByCode" name="验证系统用户信息" type="jdbc" operate="sql_query_all">
+        <param name="login_code" type="varchar" />
+        <sql>
+            select user_id from t_sys_user
+            where user_state = 1 and login_code = '#login_code'
+        </sql>
+    </hex>
+
+    <hex id="hex_login_removeTokenById" name="根据用户编号和登录类型删除token信息" type="jdbc" operate="delete" table="t_sys_user_token">
+        <param name="user_id" type="varchar" null_value="-1"/>
+        <param name="login_type" type="varchar" null_value="-1"/>
+    </hex>
+
+    <hex id="hex_login_insetToken" name="添加Token信息" type="jdbc" operate="insert" table="t_sys_user_token">
+        <param name="user_id" type="varchar" null_value="-1"/>
+        <param name="login_type" type="varchar" null_value="-1"/>
+        <param name="login_token" type="varchar" null_value="-1"/>
+        <param name="login_note" type="varchar"/>
+        <param name="login_time" type="session" null_value="current_time"/>
+    </hex>
+
+    <hex id="hex_login_queryUserByToken" name="查询加盟商用户信息" type="jdbc" operate="sql_query_all">
+        <param name="login_token" type="varchar" />
+        <sql>
+            select a.login_type,b.*
+            from t_sys_user_token a
+            inner join t_sys_user b on a.user_id = b.user_id
+            where a.login_token = '#login_token'
+        </sql>
+    </hex>
+
+    <hex id="hex_login_queryAccessListByUserId" name="查询电脑端用户权限菜单" type="jdbc" operate="sql_query_all">
+        <param name="user_id" type="varchar" null_value="-1"/>
+        <sql>
+            select * from t_sys_menu
+            where is_display = 1
+            and menu_id in
+            (select distinct(b.menu_id) as  menu_id
+            from l_user_role a
+            inner join l_role_menu b on a.role_id = b.role_id
+            where a.user_id = '#user_id')
+            order by parent_id,sort
+        </sql>
+    </hex>
+
+    <hex id="hex_login_getCurrentUserInfoFunction" name="获取当前用户信息" type="function" operate="com.cffc.manage.function.login.GetCurrentUserInfoFunction">
+        <param name="login_token" type="session" null_value="login_token"/>
+    </hex>
+
+    <hex id="hex_login_updateLastLoginTime" name="更新最近登录时间" type="jdbc" operate="update" table="t_sys_user">
+        <param name="user_id" type="varchar" primary="true"/>
+        <param name="last_login_time" type="varchar"/>
+    </hex>
+
+    <hex id="hex_login_updatePasswordFunction" name="修改密码" type="function" operate="com.cffc.manage.function.login.UpdatePasswordFunction">
+        <param name="former_login_pass" type="varchar"/>
+        <param name="login_pass" type="varchar"/>
+    </hex>
+
+    <hex id="hex_login_queryPassword" name="查询旧密码" type="jdbc" operate="sql_query_all">
+        <param name="user_id" type="varchar"/>
+        <param name="login_pass" type="md5"/>
+        <sql>
+            select login_pass from t_sys_user
+            where user_id = '#user_id'
+            and login_pass = '#login_pass'
+        </sql>
+    </hex>
+
+    <hex id="hex_login_updatePassword" name="修改密码" type="jdbc" operate="update" table="t_sys_user">
+        <param name="user_id" type="varchar" primary="true"/>
+        <param name="login_pass" type="md5"/>
+    </hex>
+
+    <hex id="hex_login_queryUser" name="查询用户信息" type="jdbc" operate="sql_query">
+        <param name="login_code" type="char" />
+        <param name="user_name" type="varchar" />
+        <param name="mobile_phone" type="varchar" />
+        <param name="role_name" type="varchar" />
+        <sql>
+            select * from t_sys_user
+            WHERE
+            1 = 1
+            <if test="#login_code != null">
+                AND login_code LIKE '%#login_code%'
+            </if>
+            <if test="#user_name != null">
+                AND user_name LIKE '%#user_name%'
+            </if>
+            <if test="#mobile_phone != null">
+                AND mobile_phone LIKE '%#mobile_phone%'
+            </if>
+            <if test="#role_name != null">.3
+                AND role_name = '#role_name'
+            </if>
+                order by role_id asc
+        </sql>
+    </hex>
+
+</hexs>

@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE> New Document </TITLE>
+    <META NAME="Generator" CONTENT="EditPlus">
+    <META NAME="Author" CONTENT="">
+    <META NAME="Keywords" CONTENT="">
+    <META NAME="Description" CONTENT="">
+    <META name="viewport"
+          content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: calc(100vw/3.75);
+        }
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 70px;
+            background-color: #f3f3f3;
+        }
+        .header p{
+            margin-left:20px;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            font-size: 18px;
+            display:inline-block;
+        }
+        .header span{
+            color:#fff;
+            margin-right: 20px;
+            float: right;
+            line-height: 45px;
+        }
+        .header-two p{
+            margin-left:20px;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            font-size: 18px;
+            display:inline-block;
+        }
+        .header-two span{
+            color:#fff;
+            margin-left:6px;
+            line-height: 45px;
+        }
+        .appeal-submit{
+            width: 94%;
+            text-align: center;
+            position: absolute;
+            top:83%;
+        }
+
+        .search-input {
+            background-image: url('img/search.png');
+            background-repeat: no-repeat;
+            background-size: auto .16rem;
+            background-position: .2rem .11rem;
+            width: 100%;
+            height: .4rem;
+            /*line-height: .4rem;*/
+            border-radius: .2rem;
+            padding-left: .4rem;
+            border: 1px solid white;
+            font-size: .14rem;
+        }
+        .search-input1 {
+            background-repeat: no-repeat;
+            background-size: auto .16rem;
+            background-position: .2rem .11rem;
+            width: 96%;
+            height: .4rem;
+            border-radius: .1rem;
+            padding-left: .1rem;
+            border: 1px solid #efefef;
+            font-size: .14rem;
+        }
+        .appeal-submit input{
+            margin-top:.3rem;
+            margin-bottom:.2rem;
+            margin-left:3%;
+            width: 100%;
+            height: .5rem;
+            background-color: #0663DA;
+            color: #fff;
+            border-radius: .05rem;
+            border:1px solid #0663DA;
+            font-size: .16rem;
+        }
+        .header-two i{
+            color:#fff;
+            margin-left: 20px;
+            line-height: 45px;
+        }
+        .header-two input{
+            border:none;
+            width:80%;
+            background-color:transparent;
+        }
+        ul li{list-style: none;}
+        a{text-decoration: none;cursor: pointer;}
+        html{height: 100%;}
+        a,input,img,textarea,span,div{outline: 0;-webkit-tap-highlight-color:rgba(255,0,0,0);}
+        [class^="sort_box_out"]{
+            width: 100%;
+            padding-top: 70px;
+            overflow: scroll;
+            height:100%;
+            -webkit-overflow-scrolling:touch;
+        }
+        [class^="sort_list"]{
+            margin-left:5%;
+            width:90%;
+            padding-top:.15rem;
+            padding-bottom:.15rem;
+            position: relative;
+            line-height: .3rem;
+            background-color: white;
+            border-bottom: .01rem solid #e2e2e2;
+        }
+
+        [class^="sort_list"] .num_name{
+            color: #000;
+        }
+
+        .num_name{
+            font-size: .15rem;
+        }
+        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+            color: #C2C2C2;
+        }
+
+        input:-moz-placeholder, textarea:-moz-placeholder {
+            color: #C2C2C2;
+        }
+
+        input::-moz-placeholder, textarea::-moz-placeholder {
+            color: #C2C2C2;
+        }
+
+        input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+            color: #C2C2C2;
+        }
+        input{
+            tab-index: -1;
+        }
+
+        .cover-div {
+            background: #000;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            filter: alpha(opacity=30);
+            opacity: 0.3;
+            display: none;
+            z-index: 3;
+        }
+
+        .add-select {
+            width: 80%;
+            height: 1.65rem;
+            top: 50%;
+            left: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            z-index: 4;
+            border-radius: .06rem;
+        }
+    </style>
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.min.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="../frame/includeNoCss.js"></script>
+    <script src="../cffc/util/util.js?v=20190801"></script><!--封装函数-->
+    <script type="text/javascript" src="certifying.js?v=201909013"></script>
+
+</HEAD>
+
+<BODY style="background-color: white;">
+<div class="header">
+    <div style="float:left;margin-top: .15rem;width: 85%;padding-left:3%;">
+        <input id="searchInput" class="search-input" type="text" placeholder="输入搜索的关键字" />
+    </div>
+    <div style="float: left;width:13%;margin-top: .2rem;padding-left:2%;" onclick="showCertifyingDialog()">
+        <img src="img/add.png" alt="" style="height: .3rem;">
+    </div>
+</div>
+
+<div class="sort_box_out">
+    <div class="sort_box" style="min-height:101%;">
+
+    </div>
+</div>
+
+
+<!-- 遮罩层 -->
+<div id="cover" class="cover-div">
+
+</div>
+
+<div class="add-select" hidden="hidden">
+    <div style="height: .4rem;line-height:.4rem;padding:0px .1rem 0px .1rem;border-bottom:.01rem solid #F1F1F1;">
+        <div style="float: left;width: 50%;">
+            新增发证单位
+        </div>
+        <div style="float:left;width: 50%;text-align: right;padding-top:.125rem;">
+            <img src="img/cancel.png" style="height: .15rem;" onclick="cancelAdd()">
+        </div>
+    </div>
+    <div style="height: .64rem;width: 100%;text-align: center;margin-top:.2rem;">
+        <input id="certifyingName" class="search-input1" placeholder="请输入发证单位名称">
+    </div>
+    <div style="height: .4rem;width: 100%;text-align: center;border-top:.01rem solid #F1F1F1;">
+        <div onclick="cancelAdd();" style="width: 50%;height: .4rem;line-height: .4rem;float: left;border-right:.01rem solid #F1F1F1;">取消</div>
+        <div onclick="inputCertifying()" style="width: 50%;height: .4rem;line-height: .4rem;float: left;color: #0663DA;">确定</div>
+    </div>
+</div>
+
+</BODY>
+</HTML>

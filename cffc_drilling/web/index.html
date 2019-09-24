@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级学生管理系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="frame/include.js"></script>
+    <script type="text/javascript" src="frame/includeNoCss.js"></script>
+</head>
+<body>
+
+<div style="height: 50px">
+
+    <a href="cffc/login/login.html">用户登录</a>
+</div>
+    <div>
+        <button onclick="createGrid()">账号管理</button>
+        <span>班级管理</span>
+        <span>学生管理</span>
+    </div>
+    <div id="targetGrid1"></div>
+</body>
+<script>
+    function createGrid() {
+        var grid = new hait.grid.Grid();
+        grid.setParam({
+            style : "width:600px;height:300px",
+            columns : [
+                {field:"did",text:"字典编号"},
+                {field:"name",text:"字典名称"},
+                {field:"val",text:"字典取值"},
+                {field:"note",text:"取值说明"}
+            ],
+            data : [
+                {did:"1",name:"名称1",val:"1",note:"说明1"},
+                {did:"2",name:"名称1",val:"2",note:"说明2"},
+                {did:"3",name:"名称1",val:"3",note:"说明3"},
+                {did:"4",name:"名称2",val:"4",note:"说明4"},
+                {did:"5",name:"名称2",val:"1",note:"说明1"},
+                {did:"6",name:"名称2",val:"2",note:"说明2"}
+            ]
+        });
+        grid.draw();
+        $("#targetGrid1").append(grid.obj);
+    }
+
+</script>
+</html>

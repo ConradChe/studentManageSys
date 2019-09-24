@@ -1,0 +1,85 @@
+/**
+* 针对较差的显示器做出的调整
+*/
+.hait-input {
+	border: 1px solid #9c9c9c;
+}
+
+.hait-input[required] {
+	background-color: #cefffc;
+}
+
+.hait-select {
+	border: 1px solid #9c9c9c;
+}
+
+.hait-select[required] {
+	background-color: #cefffc;
+}
+
+.hait-select .select-button {
+	border-left: 1px solid #9c9c9c;
+}
+
+.hait-button {
+	border: 1px solid #9c9c9c;
+	background-color: #e3e3e3;
+}
+
+.hait-table-border {
+	border: 1px solid #9c9c9c;
+}
+
+.hait-table thead th {
+	color: #878787;
+	border-right: 1px solid #9c9c9c;
+	border-bottom: 1px solid #9c9c9c;
+	background-color: #d7dae3;
+}
+
+.hait-table tbody td {
+	border-right: 1px solid #9c9c9c;
+	border-bottom: 1px solid #9c9c9c;
+}
+
+.hait-table-bottom {
+	border-top: 1px solid #9c9c9c;
+}
+
+.hait-table tbody td.group {
+	background-color: #e3e3e3;
+}
+
+.hait-table tbody tr.selected td {
+	background-color: #d7dae3;
+}
+
+.hait-table tbody tr:hover td {
+	background-color: #d7dae3;
+}
+
+.hait-table-bottom .pagination-bar ul.pagination-num {
+	border-left: 1px solid #9c9c9c;
+	border-top: 1px solid #9c9c9c;
+}
+
+.hait-table-bottom .pagination-bar ul.pagination-num li {
+	border-right: 1px solid #9c9c9c;
+	border-bottom: 1px solid #9c9c9c;
+}
+
+.hait-table-bottom .pagination-bar .pagination-input {
+	border: 1px solid #9c9c9c;
+}
+
+.hait-table-bottom .pagination-bar .pagination-search {
+	border: 1px solid #9c9c9c;
+}
+
+.title-bar {
+	border-bottom: 1px solid #9c9c9c;
+}
+
+.separation-line{
+	background-color: #9c9c9c;
+}

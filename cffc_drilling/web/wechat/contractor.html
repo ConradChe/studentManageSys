@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE> New Document </TITLE>
+    <META NAME="Generator" CONTENT="EditPlus">
+    <META NAME="Author" CONTENT="">
+    <META NAME="Keywords" CONTENT="">
+    <META NAME="Description" CONTENT="">
+    <META name="viewport"
+          content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <style>
+        html {
+            font-size: calc(100vw/3.75);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            tab-index: -1;
+        }
+
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 70px;
+            background-color: #f3f3f3;
+        }
+
+        .header p {
+            margin-left: 20px;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .header span {
+            color: #fff;
+            margin-right: 20px;
+            float: right;
+            line-height: 45px;
+        }
+
+        .header-two {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 45px;
+        }
+
+        .header-two p {
+            margin-left: 20px;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .header-two span {
+            color: #fff;
+            margin-left: 6px;
+            line-height: 45px;
+        }
+
+        .header-two i {
+            color: #fff;
+            margin-left: 20px;
+            line-height: 45px;
+        }
+
+        .header-two input {
+            border: none;
+            width: 80%;
+            background-color: transparent;
+        }
+
+        .input {
+            border-bottom: 2px #fff solid;
+            display: inline-block;
+            height: 42px;
+            width: calc(100% - 50px);
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        a, input, img, textarea, span, div {
+            outline: 0;
+            -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+        }
+
+        #letter {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            font-size: 75px;
+            color: #555;
+            text-align: center;
+            line-height: 100px;
+            background: rgba(145, 145, 145, 0.6);
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -50px 0px 0px -50px;
+            z-index: 2;
+            display: none;
+        }
+
+        #letter img {
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin: 25px 0px 0px 25px;
+        }
+
+        [class^="sort_box"] {
+            width: 98%;
+            padding-top: 60px;
+            overflow: auto;
+            height:100%;
+            -webkit-overflow-scrolling:touch;
+        }
+
+        [class^="sort_list"] {
+            padding: .1rem .4rem .1rem .15rem;
+            position: relative;
+            line-height: .25rem;
+            background-color: white;
+        }
+
+        [class^="sort_list"] .num_name {
+            color: #000;
+            font-size:.14rem;
+        }
+
+        .sort_letter {
+            height: .4rem;
+            line-height: .4rem;
+            padding-left: .15rem;
+            color: #787878;
+            font-size: .15rem;
+        }
+
+        .initials {
+            position: fixed;
+            top: .6rem;
+            right: .05rem;
+            height: 100%;
+            width: .24rem;
+            padding-right: .14rem;
+            padding-left: .07rem;
+            text-align: center;
+            font-size: .13rem;
+            z-index: 2;
+            border: 1px solid white;
+            background-color: white;
+        }
+
+        .search-input {
+            background-image: url('img/search.png');
+            background-repeat: no-repeat;
+            background-size: auto .16rem;
+            background-position: .2rem .11rem;
+            width: 100%;
+            height: .4rem;
+            /*line-height: .4rem;*/
+            border-radius: .2rem;
+            padding-left: .4rem;
+            border: 1px solid white;
+            font-size: .14rem;
+        }
+        .search-input1 {
+            background-repeat: no-repeat;
+            background-size: auto .16rem;
+            background-position: .2rem .11rem;
+            width: 96%;
+            height: .4rem;
+            border-radius: .1rem;
+            padding-left: .1rem;
+            border: 1px solid #efefef;
+            font-size: .14rem;
+        }
+        .initials li img {
+            width: 14px;
+        }
+        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+            color: #C2C2C2;
+        }
+
+        input:-moz-placeholder, textarea:-moz-placeholder {
+            color: #C2C2C2;
+        }
+
+        input::-moz-placeholder, textarea::-moz-placeholder {
+            color: #C2C2C2;
+        }
+
+        input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+            color: #C2C2C2;
+        }
+
+        .cover-div {
+            background: #000;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            filter: alpha(opacity=30);
+            opacity: 0.3;
+            display: none;
+            z-index: 3;
+        }
+
+        .add-select {
+            width: 80%;
+            height: 1.65rem;
+            top: 50%;
+            left: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            z-index: 4;
+            border-radius: .06rem;
+        }
+    </style>
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.min.css">
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="../frame/includeNoCss.js"></script>
+    <script type="text/javascript" src="js/jquery.charfirst.pinyin.js"></script>
+    <script type="text/javascript" src="contractor.js?v=20190916"></script>
+
+</HEAD>
+
+<BODY style="background-color: #f3f3f3">
+<div class="header-two">
+    <div>
+        <i class="glyphicon glyphicon-chevron-left" onclick="back()"><a href="javascript:back()"></a> </i>
+        <div class="input">
+            <span class="glyphicon glyphicon-search"></span>
+            <input id="search" type="text"/>
+        </div>
+    </div>
+</div>
+
+<div class="header">
+    <div style="float:left;margin-top: .15rem;width: 85%;padding-left:3%;">
+        <input id="searchInput" class="search-input" type="text" placeholder="输入搜索的关键字" />
+    </div>
+    <div style="float: left;width:13%;margin-top: .2rem;padding-left:2%;" onclick="showContractorDialog()">
+        <img src="img/add.png" alt="" style="height: .3rem;">
+    </div>
+</div>
+<div id="letter"></div>
+
+<div class="sort_box">
+
+</div>
+<div class="initials">
+    <ul>
+    </ul>
+</div>
+
+<!-- 遮罩层 -->
+<div id="cover" class="cover-div">
+
+</div>
+
+<div class="add-select" hidden="hidden">
+    <div style="height: .4rem;line-height:.4rem;padding:0px .1rem 0px .1rem;border-bottom:.01rem solid #F1F1F1;">
+        <div style="float: left;width: 50%;">
+            新增工作单位
+        </div>
+        <div style="float:left;width: 50%;text-align: right;padding-top:.125rem;">
+            <img src="img/cancel.png" style="height: .15rem;" onclick="cancelAdd()">
+        </div>
+    </div>
+    <div style="height: .64rem;width: 100%;text-align: center;margin-top:.2rem;">
+        <input id="contractorName" class="search-input1" placeholder="请输入工作单位名称">
+    </div>
+    <div style="height: .4rem;width: 100%;text-align: center;border-top:.01rem solid #F1F1F1;">
+        <div onclick="cancelAdd();" style="width: 50%;height: .4rem;line-height: .4rem;float: left;border-right:.01rem solid #F1F1F1;">取消</div>
+        <div onclick="inputContractor()" style="width: 50%;height: .4rem;line-height: .4rem;float: left;color: #0663DA;">确定</div>
+    </div>
+</div>
+
+</BODY>
+</HTML>

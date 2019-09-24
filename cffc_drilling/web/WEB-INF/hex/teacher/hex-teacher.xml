@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hexs>
+    <hex id="hex_teacher_queryTeacher" name="查询教师表" type="jdbc" operate="sql_query">
+        <param name="user_id" type="char" />
+        <param name="class_name" type="varchar" />
+        <param name="teacher_no" type="char" />
+        <param name="teacher_name" type="varchar" />
+        <param name="mobile_phone" type="varchar" />
+        <sql>
+            select *
+            from t_teacher
+            where 1=1
+            <if test="#user_id != null">
+                AND user_id = '#user_id'
+            </if>
+            <if test="#class_name != null">
+                AND class_name LIKE '%#class_name%'
+            </if>
+            <if test="#teacher_no != null">
+                AND teacher_no LIKE '%#teacher_no%'
+            </if>
+            <if test="#teacher_name != null">
+                AND teacher_name LIKE '%#teacher_name%'
+            </if>
+            <if test="#mobile_phone != null">
+                AND mobile_phone LIKE '%#mobile_phone%'
+            </if>
+
+        </sql>
+    </hex>
+
+    <hex id="hex_teacher_queryTeacherById" name="通过id查找教师" type="jdbc" operate="query_all" table="t_teacher">
+        <param name="user_id" type="char"/>
+    </hex>
+
+    <hex id="hex_teacher_queryTeacherByNo" name="通过教师工号查找" type="jdbc" operate="query_all" table="t_teacher">
+        <param name="teacher_no" type="char"/>
+    </hex>
+
+    <hex id="hex_teacher_insertTeacher" name="新增教师" type="jdbc" operate="insert" table="t_teacher">
+        <param name="user_id" type="char"/>
+        <param name="teacher_no" type="char"/>
+        <param name="teacher_name" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="mobile_phone" type="varchar"/>
+    </hex>
+
+    <hex id="hex_teacher_updateTeacher" name="更新教师" type="jdbc" operate="update" table="t_teacher">
+        <param name="user_id" type="char" primary="true"/>
+        <param name="teacher_name" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="mobile_phone" type="varchar"/>
+    </hex>
+
+    <hex id="hex_teacher_deleteTeacher" name="删除教师" type="jdbc" operate="delete" table="t_teacher">
+        <param name="user_id" type="char"/>
+    </hex>
+
+    <hex id="hex_teacher_resetTeacherFunction" name="分配教师function" type="function" operate="com.cffc.manage.function.teacher.ResetTeacherFunction">
+        <param name="user_id" type="char" primary="true"/>
+        <param name="teacher_no" type="varchar"/>
+        <param name="class_id" type="char"/>
+        <param name="class_name" type="varchar"/>
+    </hex>
+
+    <hex id="hex_teacher_resetTeacher" name="分配教师" type="jdbc" operate="update" table="t_teacher">
+        <param name="user_id" type="char" primary="true"/>
+        <param name="teacher_no" type="varchar"/>
+        <param name="class_id" type="char"/>
+        <param name="class_name" type="varchar"/>
+    </hex>
+</hexs>

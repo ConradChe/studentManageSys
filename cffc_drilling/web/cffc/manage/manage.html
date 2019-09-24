@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/manage.css?v=201908153">
+    <script id="haitFrameScript" type="text/javascript" src="../../frame/include.js"></script>
+    <script src="js/manage.js?v=201908191"></script>
+    <script src="js/user.js?v=201908145"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body id="body">
+<div>
+    <div class="manage-head">
+        <div class="manage-contractor">
+            <div class="contractor-img">
+            </div>
+            <div class="contractor-name">
+            </div>
+        </div>
+        <div class="manage-user">
+            <div class="menu-name-select">
+
+            </div>
+            <div class="user-name">
+                <div class="user-button">
+                    <img class="my-img" src="images/manage/user_img.png"/>
+                    <span class="my-name"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="manage-body">
+        <div class="manage-menu">
+
+        </div>
+        <div class="manage-page-box">
+            <div id="managePage" class="manage-page">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 遮罩层 -->
+<div class="cover-div" hidden="hidden"></div>
+<div class="cover-transparent" hidden="hidden"></div>
+
+<!-- 点击我的名字弹出框 -->
+<div class="operate-div" hidden="hidden">
+    <div class="operate-border"></div>
+    <div class="my-operate">
+        <div class="update-password" onclick="showUpdatePasswordDialog()">
+            <img src="images/manage/password.png" class="operate-icon-password">
+            修改密码
+        </div>
+        <div class="exit-logout" onclick="showExitDialog()">
+            <img src="images/manage/exit.png" class="operate-icon-exit">
+            退出登录
+        </div>
+    </div>
+</div>
+
+<div class="exit-system" hidden="hidden">
+    <div class="exit-head">
+        <div class="exit-text">退出</div>
+        <div class="cancel-button">
+            <img src="images/manage/exit_cancel.png" class="cancel-button-icon" onclick="cancelExitSystem()">
+        </div>
+    </div>
+    <div class="exit-body">
+        <img src="images/manage/exit_warning.png" class="exit-warning">
+        此操作将退出平台，是否继续？
+    </div>
+    <div class="exit-button">
+        <div class="confirm-button" onclick="exitSystem()">确定</div>
+        <div class="cancel-button-bottom" onclick="cancelExitSystem()">取消</div>
+    </div>
+</div>
+
+<div id="updatePasswordDialog" hait-type="hait.dialog.Dialog" title="修改密码" style="width:400px;height:280px;">
+    <div>
+        <form id="changePassForm" hait-type="hait.form.Form" autocomplete="off">
+            <table class="password-table">
+                <tr>
+                    <td><span class="required-text">*</span>原密码：</td>
+                    <td><input type="password" name="formerLoginCode" hait-type="hait.form.field.TextField"
+                               required="true" name-text="原密码"/></td>
+                </tr>
+                <tr>
+                    <td><span class="required-text">*</span>新密码：</td>
+                    <td><input type="password" name="loginCode" hait-type="hait.form.field.TextField"
+                               required="true"  name-text="新密码"/></td>
+                </tr>
+                <tr>
+                    <td><span class="required-text">*</span>确认密码：</td>
+                    <td><input type="password" name="rePass" hait-type="hait.form.field.TextField"
+                               required="true" name-text="确认密码"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="buttons">
+        <button onclick="closeDialog()">取消</button>
+        <button stress="true" onclick="formSubmit()">保存</button>
+    </div>
+</div>
+
+
+</body>
+</html>

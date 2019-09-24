@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hexs>
+
+    <hex id="hex_register_queryUserById" name="通过id查询用户" type="jdbc" operate="query_all" table="t_sys_user">
+        <param name="user_id" type="char"/>
+    </hex>
+
+    <hex id="hex_register_queryUserByLoginCode" name="根据电话查询用户" type="jdbc" operate="query" table="t_sys_user">
+        <param name="login_code" type="varchar" />
+    </hex>
+
+    <hex id="hex_register_insertUser" name="添加用户信息" type="jdbc" operate="insert" table="t_sys_user">
+        <param name="user_id" type="varchar" />
+        <param name="login_code" type="varchar" />
+        <param name="user_name" type="varchar"/>
+        <param name="login_pass" type="md5" />
+        <param name="mobile_phone" type="varchar" />
+        <param name="user_state" type="int" />
+        <param name="operate_id" type="varchar" />
+        <param name="operate_name" type="varchar" />
+        <param name="operate_time" type="varchar" />
+        <param name="gender" type="char"/>
+        <param name="id_card" type="varchar"/>
+        <param name="role_name" type="varchar"/>
+        <param name="role_id" type="varchar"/>
+    </hex>
+
+    <hex id="hex_register_userRegisterFunction" name="用户注册function" type="function" operate="com.cffc.manage.function.register.UserRegisterFunction">
+        <param name="login_code" type="varchar" />
+        <param name="user_name" type="varchar"/>
+        <param name="login_pass" type="varchar" />
+        <param name="role_id" type="varchar"/>
+        <param name="role_name" type="varchar"/>
+    </hex>
+
+    <hex id="hex_register_userAddFunction" name="管理员添加用户" type="function" operate="com.cffc.manage.function.register.UserAddFunction">
+        <param name="login_code" type="varchar" />
+        <param name="user_name" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="id_card" type="varchar"/>
+        <param name="role_id" type="varchar"/>
+        <param name="role_name" type="varchar"/>
+    </hex>
+
+    <hex id="hex_register_updateUserFunction" name="更新用户信息function" type="function" operate="com.cffc.manage.function.user.UpdateUserFunction">
+        <param name="user_id" type="char" primary="true" />
+        <param name="login_code" type="varchar" />
+        <param name="user_name" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="id_card" type="varchar"/>
+        <param name="role_id" type="varchar"/>
+        <param name="role_name" type="varchar"/>
+    </hex>
+
+    <hex id="hex_register_updateUser" name="更新用户信息" type="jdbc" operate="update" table="t_sys_user">
+        <param name="user_id" type="char" primary="true" />
+        <param name="login_code" type="varchar" />
+        <param name="user_name" type="varchar"/>
+        <param name="gender" type="char"/>
+        <param name="mobile_phone" type="varchar" />
+        <param name="id_card" type="varchar"/>
+        <param name="role_id" type="varchar"/>
+        <param name="role_name" type="varchar"/>
+        <param name="operate_time" type="varchar" />
+    </hex>
+
+    <hex id="hex_register_deleteUserFunction" name="删除用户function" type="function" operate="com.cffc.manage.function.user.DeleteUserFunction">
+        <param name="user_id" type="char"/>
+    </hex>
+
+    <hex id="hex_register_deleteUserById" name="删除用户" type="jdbc" operate="delete" table="t_sys_user">
+        <param name="user_id" type="char"/>
+    </hex>
+
+    <hex id="hex_register_resetUserPswFunction" name="重置密码Function" type="function" operate="com.cffc.manage.function.user.ResetUserPswFunction">
+        <param name="user_id" type="char" primary="true" />
+    </hex>
+
+    <hex id="hex_register_resetUserPsw" name="重置密码" type="jdbc" operate="update" table="t_sys_user">
+        <param name="user_id" type="char" primary="true" />
+        <param name="login_pass" type="md5"/>
+    </hex>
+
+</hexs>

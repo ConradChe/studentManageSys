@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="pragma" content="no-cache"> 
+	<meta http-equiv="cache-control" content="no-cache"> 
+	<meta http-equiv="expires" content="0"> 
+	<script type="text/javascript" src="frame/include.js"></script>
+	<script type="text/javascript">
+		$(document).keydown(function(event){
+		   if(event.keyCode==13){
+		         loginFormSubmit();
+		         return false;
+		     }
+		});
+		
+		function loginFormSubmit(){
+			var loginName = document.loginForm["login_code"].value;
+			var loginPwd = document.loginForm["login_pass"].value;
+			
+			// 进行基本有效性验证
+			if(loginName == null || loginName.length == 0){
+				alert("账号不能为空!");
+				return;
+			}
+			if(loginPwd == null || loginPwd.length == 0){
+				alert("密码不能为空!");
+				return;
+			}
+			
+			// 进行更多验证
+			if(loginName.indexOf("'") >= 0 || loginPwd.indexOf("'") >=0){
+				alert("用户名和密码中不允许存在单引号，请检查!");
+				return;
+			}
+			
+			document.loginForm.submit();
+		}
+	</script>
+  </head>
+  
+  <body>
+    <div class="login_form">
+		<form name="loginForm" method="post" action="login/login.do" hait-type="hait.form.Form">
+
+            <table border="0" style="align-content: center">
+                <tr>
+                    <td>账号：</td>
+                    <td>
+                        <input class="username input_us" type="text" maxlength="11" name="login_code"
+                               hait-type="hait.form.field.TextField" placeholder="请输入您的账号" autocomplete="off"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td>
+                        <input class="password input_us" type="password" maxlength="20" name="login_pass"
+                               hait-type="hait.form.field.TextField" placeholder="请输入密码" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>角色：</td>
+                    <td>
+                        <select class="role_id input_us" name="role_id" hait-type="hait.form.field.SelectField" default-value="1">
+                            <option value="1">管理员</option>
+                            <option value="2">教师</option>
+                            <option value="3">学生</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input class="btn_login " type="button" value="登&nbsp;&nbsp;&nbsp;录" onclick="loginFormSubmit()"></td>
+                    <td><button><a href="register.html">註&nbsp;&nbsp;&nbsp;冊</a></button></td>
+                </tr>
+            </table>
+		</form>
+	</div>
+  </body>
+</html>

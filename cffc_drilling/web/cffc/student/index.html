@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生个人中心</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script id="haitFrameScript" type="text/javascript" src="../../frame/include.js"></script>
+    <script type="text/javascript" src="js/student.js"></script>
+</head>
+<body>
+<div class="container" style="width:97%">
+    <form id="studentOperateForm" hait-type="hait.form.Form" action="#" method="post">
+        <table border="0" width="100%">
+            <tr>
+                <td>学生学号</td>
+                <td>
+                    <input name="student_no" type="text" hait-type="hait.form.field.TextField"/>
+                </td>
+                <td>学生姓名</td>
+                <td>
+                    <input name="student_name" type="text" hait-type="hait.form.field.TextField"/>
+                </td>
+            </tr>
+            <tr>
+                <td>入学时间</td>
+                <td>
+                    <input type="text" name="start_time" hait-type="hait.form.field.DateField"/>
+                </td>
+                <td>所属班级</td>
+                <td>
+                    <input name="class_name" type="text" hait-type="hait.form.field.TextField" disabled="disabled"/>
+                </td>
+            </tr>
+            <tr>
+                <td>身份证号</td>
+                <td>
+                    <input name="id_card" type="text" hait-type="hait.form.field.TextField"/>
+                </td>
+                <td>性别</td>
+                <td>
+                    <select name="gender" hait-type="hait.form.field.RadioGroupField" default-value="男">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>电话</td>
+                <td colspan="3">
+                    <input name="mobile_phone" type="text" hait-type="hait.form.field.TextField" maxlength="11"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button id="mainDealBtn" stress="true" onclick="saveTeacherData()">提交</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

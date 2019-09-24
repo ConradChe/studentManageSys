@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hexs>
+
+    <hex id="hex_role_insertUserRole" name="新增用户角色关系" type="jdbc" operate="insert" table="l_user_role">
+        <param name="user_id" type="char"/>
+        <param name="role_id" type="varchar"/>
+    </hex>
+
+    <hex id="hex_role_updateUserRole" name="更新用户角色关系" type="jdbc" operate="update" table="l_user_role">
+        <param name="user_id" type="char" primary="true"/>
+        <param name="role_id" type="varchar"/>
+    </hex>
+
+    <hex id="hex_role_deleteUserRole" name="删除用户角色关系" type="jdbc" operate="delete" table="l_user_role">
+        <param name="user_id" type="char"/>
+    </hex>
+
+</hexs>
